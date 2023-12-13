@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ScriBBler</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montez&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1 class="main-logo">ScriBBler</h1>
+        <p class="subheading">Explore, Imagine, Create</p>
+      </div>
+      <div class="buttons">
+        <button id="signUpBtn">Sign Up</button>
+        <button id="signInBtn">Sign In</button>
+      </div>
+    </header>
+    <!-- The Sign Up Modal -->
+    <div id="signUpModal" class="modal">
+      <!-- Modal content -->
+      <<!-- Modal content -->
+      <div class="modal-content">
+        <span class="close"
+          ><i class="fa fa-times" aria-hidden="true"></i
+        ></span>
+        <h2>Get Started</h2>
+        <hr />
+        <form id="signUpForm">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Enter your name" required />
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter your username"
+            required
+          />
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            required
+          />
+          <label for="confirmPassword">Confirm Password</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            placeholder="Re-enter your password"
+            required
+          />
+          <button type="submit" class="signUpBtn">Sign Up</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="main-section">
+      <button class="main-btn" id="allPostsBtn">All Posts</button>
+      <button class="main-btn" id="createPostBtn">Create Post</button>
+    </div>
+
+    <script src="scripts/common.js"></script>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
