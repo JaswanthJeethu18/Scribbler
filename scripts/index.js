@@ -6,6 +6,9 @@ var signInModal = document.getElementById("signInModal");
 var signUpBtn = document.getElementById("signUpBtn");
 var signInBtn = document.getElementById("signInBtn");
 
+// Get the link that opens the sign up modal
+var signUpLink = document.getElementById("signUpLink");
+
 // Get the <span> element that closes the modal
 var closeBtn = document.getElementsByClassName("close");
 
@@ -15,6 +18,13 @@ signUpBtn.onclick = function () {
 };
 signInBtn.onclick = function () {
   signInModal.style.display = "block";
+};
+
+// When the user clicks the link, hide the sign in modal and show the sign up modal
+signUpLink.onclick = function (event) {
+  event.preventDefault();
+  signInModal.style.display = "none";
+  signUpModal.style.display = "block";
 };
 
 // When the user clicks on <span> (x), close the modal
