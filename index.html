@@ -63,6 +63,35 @@
       </div>
     </div>
 
+    <!-- The Sign In Modal -->
+    <div id="signInModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close"
+          ><i class="fa fa-times" aria-hidden="true"></i
+        ></span>
+        <h2>Welcome Back!</h2>
+        <hr />
+        <form id="signInForm">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter your username"
+            required
+          />
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            required
+          />
+          <button type="submit" class="signInBtn">Sign In</button>
+        </form>
+      </div>
+    </div>
+
     <div class="main-section">
       <button class="main-btn" id="allPostsBtn">All Posts</button>
       <button class="main-btn" id="createPostBtn">Create Post</button>
