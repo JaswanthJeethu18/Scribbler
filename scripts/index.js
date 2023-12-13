@@ -1,10 +1,12 @@
 // Get the modal
 var signUpModal = document.getElementById("signUpModal");
 var signInModal = document.getElementById("signInModal");
+var createPostModal = document.getElementById("createPostModal");
 
 // Get the button that opens the modal
 var signUpBtn = document.getElementById("signUpBtn");
 var signInBtn = document.getElementById("signInBtn");
+var createPostBtn = document.getElementById("createPostBtn");
 
 // Get the link that opens the sign up modal
 var signUpLink = document.getElementById("signUpLink");
@@ -20,6 +22,11 @@ signInBtn.onclick = function () {
   signInModal.style.display = "block";
 };
 
+// When the user clicks the button, open the modal
+createPostBtn.onclick = function () {
+  createPostModal.style.display = "block";
+};
+
 // When the user clicks the link, hide the sign in modal and show the sign up modal
 signUpLink.onclick = function (event) {
   event.preventDefault();
@@ -32,6 +39,7 @@ for (var i = 0; i < closeBtn.length; i++) {
   closeBtn[i].onclick = function () {
     signUpModal.style.display = "none";
     signInModal.style.display = "none";
+    createPostModal.style.display = "none";
   };
 }
 
@@ -42,5 +50,8 @@ window.onclick = function (event) {
   }
   if (event.target == signInModal) {
     signInModal.style.display = "none";
+  }
+  if (event.target == createPostModal) {
+    createPostModal.style.display = "none";
   }
 };

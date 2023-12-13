@@ -93,8 +93,40 @@
     </div>
 
     <div class="main-section">
-      <button class="main-btn" id="allPostsBtn">All Posts</button>
+      <button
+        class="main-btn"
+        id="allPostsBtn"
+        onclick="location.href='../html/bloglist.html'"
+      >
+        All Posts
+      </button>
       <button class="main-btn" id="createPostBtn">Create Post</button>
+      <div id="createPostModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content create-post">
+          <span class="close"
+            ><i class="fa fa-times" aria-hidden="true"></i
+          ></span>
+          <h2>Pen Your Post</h2>
+          <hr />
+          <form id="createPostForm">
+            <label for="postTitle">Title</label>
+            <input
+              type="text"
+              id="postTitle"
+              placeholder="Enter title of your post"
+              required
+            />
+            <label for="postContent">Contents</label>
+            <textarea
+              id="postContent"
+              placeholder="Enter the contents of your post"
+              required
+            ></textarea>
+            <button type="submit" class="createBtn">Create</button>
+          </form>
+        </div>
+      </div>
     </div>
 
     <script src="scripts/common.js"></script>

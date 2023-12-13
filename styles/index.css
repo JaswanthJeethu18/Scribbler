@@ -167,3 +167,37 @@ input[type="password"] {
   text-decoration: none;
   cursor: pointer;
 }
+
+/* The CSS can be the same as for the "Sign Up" and "Sign In" modals */
+
+.createBtn {
+  background-color: green;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.createBtn:hover {
+  opacity: 0.8;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  height: 450px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  resize: none;
+}
+
+.modal-content.create-post {
+  width: 80%;
+}
