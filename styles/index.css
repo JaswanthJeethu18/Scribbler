@@ -171,13 +171,15 @@ input[type="password"] {
 /* The CSS can be the same as for the "Sign Up" and "Sign In" modals */
 
 .createBtn {
-  background-color: green;
+  display: block;
+  background-color: rgb(39, 189, 39);
   color: white;
   padding: 14px 20px;
-  margin: 8px 0;
+  margin: 10px auto;
   border: none;
   cursor: pointer;
-  width: 100%;
+  max-width: 30%;
+  font-size: medium;
 }
 
 .createBtn:hover {
