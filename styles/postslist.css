@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffeedd;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 10px;
+}
+
+h2 {
+  color: rgba(0, 0, 0, 0.495);
+}
+.logo {
+  font-family: "Montez", cursive;
+  font-size: 26px;
+  padding: 10px;
+}
+.main-logo {
+  color: blue;
+}
+
+.subheading {
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 15px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10px;
+  width: 25%;
+}
+
+#signInBtn,
+#signUpBtn {
+  background-color: blue;
+  color: white;
+  border-radius: 5%;
+  padding: 10px 20px;
+  margin-left: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 400px;
+  max-width: 100%; /* Could be more or less, depending on screen size */
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #3333335c;
+  width: 100%;
+  margin: 0 auto 10px auto;
+}
+
+.modal-content label {
+  font-size: 20px;
+}
+
+#signInModal p,
+#signInModal a {
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 5px 0 15px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 2%;
+  font-family: Arial, sans-serif; /* Change as needed */
+  font-size: 16px; /* Change as needed */
+}
+
+.signUpBtn,
+.signInBtn {
+  background-color: rgb(39, 189, 39);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: large;
+}
+
+.signUpBtn:hover,
+.signInBtn:hover {
+  opacity: 0.8;
+}
+
+#signUpLink {
+  color: blue;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* CSS FOR POST CARDS */
+/* Container holding the posts */
+.all-posts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* a) Each post is displayed in the form of a card */
+.post {
+  display: flex;
+  flex: 0 calc(50% - 60px);
+  background-color: #fff;
+  margin: 30px;
+  position: relative;
+  padding: 20px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px 0 #333333;
+  transition: 0.3s;
+  border-radius: 30px;
+  width: 100%;
+}
+
+/* b) When a user hovers on the post (displayed in the form of a card), a box-shadow appears */
+.post:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* c) Each post will display the user's username towards the left. */
+.post-left {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.post-username {
+  font-weight: bold;
+  font-size: large;
+}
+
+/* d) Towards the right of the username, you need to display the post's heading. Below the post's heading, you need to display the initial text of the post up to three lines only. Remember that you must not display the entire text of the post on this page itself. */
+.post-right {
+  width: 80%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.post-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #888;
+}
+
+.post-desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Position the more button to the bottom-right corner of the post */
+.post-more {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+/* e) You need to add a "trash" icon towards the top-right of each post, as shown in the screenshot given above. You can use the FontAwesome icon 'trash' for this purpose. */
+.delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+/* When a user hovers on the delete button, the pointer should change to the cursor, as shown in the screenshot given below: */
+.delete-btn:hover {
+  color: red;
+}
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+}
+.modal-content h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#delete-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.yes-btn {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.no-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
